@@ -1,0 +1,189 @@
+#users
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    regno VARCHAR(20),
+    email VARCHAR(100),
+    password VARCHAR(255),
+    role VARCHAR(20)
+);
+
+
+#books 
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    author VARCHAR(255),
+    genre VARCHAR(100),
+    description TEXT,
+    cover_image VARCHAR(255),
+    rating DECIMAL(2,1)
+);
+
+INSERT INTO books (title, author, genre, description, cover_image, rating) VALUES
+('Atomic Habits', 'James Clear', 'Self-help', 'Build good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.', 'atomic_habits.jpg', 4.6),
+('Sapiens', 'Yuval Noah Harari', 'History', 'A brief history of humankind from the Stone Age to the 21st century.', 'sapiens.jpg', 4.4),
+('The Alchemist', 'Paulo Coelho', 'Fiction', 'An inspiring tale about following your dreams and listening to your heart.', 'alchemist.jpg', 4.2),
+('1984', 'George Orwell', 'Dystopian', 'A dystopian novel exploring the consequences of totalitarianism and surveillance.', '1984.jpg', 4.5);
+
+-- Self-help
+('The Power of Now', 'Eckhart Tolle', 'Self-help', 'A guide to spiritual awakening and living in the present moment.', 'the_power_of_now.jpg', 4.5),
+('Think and Grow Rich', 'Napoleon Hill', 'Self-help', 'Strategies for personal success through visualization and belief.', 'think_and_grow_rich.jpg', 4.3),
+('The 7 Habits of Highly Effective People', 'Stephen Covey', 'Self-help', 'A framework for achieving personal and professional goals.', '7_habits.jpg', 4.2),
+('How to Win Friends and Influence People', 'Dale Carnegie', 'Self-help', 'Timeless principles of communication and influence.', 'how_to_win_friends.jpg', 4.4),
+('Can’t Hurt Me', 'David Goggins', 'Self-help', 'A memoir and guide on mental toughness and overcoming adversity.', 'cant_hurt_me.jpg', 4.7),
+('Deep Work', 'Cal Newport', 'Self-help', 'The power of focused success in a distracted world.', 'deep_work.jpg', 4.3),
+('You Are a Badass', 'Jen Sincero', 'Self-help', 'Motivational strategies to build self-confidence.', 'you_are_a_badass.jpg', 4.1),
+('Mindset', 'Carol S. Dweck', 'Self-help', 'The power of a growth mindset in learning and success.', 'mindset.jpg', 4.4),
+('Make Your Bed', 'William H. McRaven', 'Self-help', 'Life lessons from a Navy SEAL.', 'make_your_bed.jpg', 4.2),
+
+-- Fiction
+('To Kill a Mockingbird', 'Harper Lee', 'Fiction', 'A powerful tale of racial injustice and childhood in the Deep South.', 'to_kill_a_mockingbird.jpg', 4.8),
+('Pride and Prejudice', 'Jane Austen', 'Fiction', 'A romantic novel about manners and societal expectations.', 'pride_and_prejudice.jpg', 4.6),
+('The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 'A critique of the American Dream in the Roaring Twenties.', 'great_gatsby.jpg', 4.3),
+('Life of Pi', 'Yann Martel', 'Fiction', 'An epic journey of survival and spirituality.', 'life_of_pi.jpg', 4.4),
+('The Book Thief', 'Markus Zusak', 'Fiction', 'A unique WWII story told by Death.', 'book_thief.jpg', 4.7),
+('Little Women', 'Louisa May Alcott', 'Fiction', 'The classic coming-of-age tale of four sisters.', 'little_women.jpg', 4.2),
+('The Kite Runner', 'Khaled Hosseini', 'Fiction', 'A moving story of friendship and redemption.', 'kite_runner.jpg', 4.6),
+('Where the Crawdads Sing', 'Delia Owens', 'Fiction', 'A murder mystery and coming-of-age story set in the marshlands.', 'where_the_crawdads_sing.jpg', 4.5),
+('The Catcher in the Rye', 'J.D. Salinger', 'Fiction', 'A teenager’s rebellion in post-WWII America.', 'catcher_in_the_rye.jpg', 4.1),
+
+-- Dystopian
+('Brave New World', 'Aldous Huxley', 'Dystopian', 'A dystopian world of genetic engineering and state control.', 'brave_new_world.jpg', 4.4),
+('Fahrenheit 451', 'Ray Bradbury', 'Dystopian', 'A futuristic society where books are outlawed.', 'fahrenheit_451.jpg', 4.2),
+('The Hunger Games', 'Suzanne Collins', 'Dystopian', 'A survival game in a totalitarian future.', 'hunger_games.jpg', 4.5),
+('Divergent', 'Veronica Roth', 'Dystopian', 'A world divided by virtues is challenged by a brave girl.', 'divergent.jpg', 4.3),
+('The Maze Runner', 'James Dashner', 'Dystopian', 'A thrilling escape from a deadly maze.', 'maze_runner.jpg', 4.1),
+('The Handmaid’s Tale', 'Margaret Atwood', 'Dystopian', 'A terrifying future of reproductive control.', 'handmaids_tale.jpg', 4.2),
+('Station Eleven', 'Emily St. John Mandel', 'Dystopian', 'A post-pandemic world and the persistence of art.', 'station_eleven.jpg', 4.1),
+('Wool', 'Hugh Howey', 'Dystopian', 'A society living in a silo discovers dark secrets.', 'wool.jpg', 4.2),
+('Red Queen', 'Victoria Aveyard', 'Dystopian', 'A divided society with supernatural powers.', 'red_queen.jpg', 4.0),
+
+-- History
+('Guns, Germs, and Steel', 'Jared Diamond', 'History', 'The impact of environment on civilization development.', 'guns_germs_steel.jpg', 4.3),
+('The Silk Roads', 'Peter Frankopan', 'History', 'A new history centered around the East.', 'silk_roads.jpg', 4.2),
+('The Diary of Anne Frank', 'Anne Frank', 'History', 'A young girl’s account of life during the Holocaust.', 'anne_frank.jpg', 4.7),
+('A People’s History of the United States', 'Howard Zinn', 'History', 'A revisionist view of American history.', 'peoples_history.jpg', 4.1),
+('The Wright Brothers', 'David McCullough', 'History', 'The story of the inventors of modern flight.', 'wright_brothers.jpg', 4.4),
+('The Immortal Life of Henrietta Lacks', 'Rebecca Skloot', 'History', 'The woman behind the HeLa cells.', 'henrietta_lacks.jpg', 4.5),
+('The History of the Ancient World', 'Susan Wise Bauer', 'History', 'From the earliest accounts to the fall of Rome.', 'ancient_world.jpg', 4.2),
+('Team of Rivals', 'Doris Kearns Goodwin', 'History', 'Lincoln’s political genius during Civil War.', 'team_of_rivals.jpg', 4.6),
+('1776', 'David McCullough', 'History', 'America’s revolution in its defining year.', '1776.jpg', 4.3),
+
+-- Science
+('A Brief History of Time', 'Stephen Hawking', 'Science', 'An overview of cosmology, black holes, and the universe’s nature.', 'brief_history_of_time.jpg', 4.5),
+('Cosmos', 'Carl Sagan', 'Science', 'A journey through space, time, and scientific discovery.', 'cosmos.jpg', 4.6),
+('The Selfish Gene', 'Richard Dawkins', 'Science', 'A revolutionary theory on evolution and genetics.', 'selfish_gene.jpg', 4.3),
+('The Gene', 'Siddhartha Mukherjee', 'Science', 'An exploration of the gene’s history and ethical challenges.', 'the_gene.jpg', 4.4),
+('Astrophysics for People in a Hurry', 'Neil deGrasse Tyson', 'Science', 'A simplified guide to the cosmos.', 'astrophysics_tyson.jpg', 4.1),
+('The Elegant Universe', 'Brian Greene', 'Science', 'String theory and the unification of forces.', 'elegant_universe.jpg', 4.2),
+('Surely You’re Joking, Mr. Feynman!', 'Richard Feynman', 'Science', 'A physicist’s curious adventures and anecdotes.', 'surely_youre_joking.jpg', 4.6),
+('The Immortal Life of Henrietta Lacks', 'Rebecca Skloot', 'Science', 'HeLa cells and the woman behind the science.', 'henrietta_lacks_science.jpg', 4.5),
+('The Sixth Extinction', 'Elizabeth Kolbert', 'Science', 'Human-driven mass extinction of species.', 'sixth_extinction.jpg', 4.3),
+('Why We Sleep', 'Matthew Walker', 'Science', 'The importance of sleep for mind and body.', 'why_we_sleep.jpg', 4.4),
+
+-- Fantasy
+('Harry Potter and the Sorcerer’s Stone', 'J.K. Rowling', 'Fantasy', 'The beginning of Harry Potter’s magical journey.', 'harry_potter_1.jpg', 4.8),
+('The Hobbit', 'J.R.R. Tolkien', 'Fantasy', 'Bilbo Baggins’ quest through Middle-earth.', 'hobbit.jpg', 4.7),
+('The Name of the Wind', 'Patrick Rothfuss', 'Fantasy', 'The rise of a legendary hero.', 'name_of_the_wind.jpg', 4.6),
+('Mistborn: The Final Empire', 'Brandon Sanderson', 'Fantasy', 'A unique world of magic fueled by metal.', 'mistborn.jpg', 4.5),
+('A Game of Thrones', 'George R.R. Martin', 'Fantasy', 'Political intrigue in a war-torn kingdom.', 'game_of_thrones.jpg', 4.6),
+('The Lies of Locke Lamora', 'Scott Lynch', 'Fantasy', 'Thieves and cons in a magical city.', 'locke_lamora.jpg', 4.4),
+('Eragon', 'Christopher Paolini', 'Fantasy', 'A young farm boy discovers his destiny as a dragon rider.', 'eragon.jpg', 4.3),
+('The Way of Kings', 'Brandon Sanderson', 'Fantasy', 'An epic tale of war, prophecy, and knights.', 'way_of_kings.jpg', 4.7),
+('The Golden Compass', 'Philip Pullman', 'Fantasy', 'A girl’s journey across worlds with magical creatures.', 'golden_compass.jpg', 4.2),
+('The Magicians', 'Lev Grossman', 'Fantasy', 'A darker, grown-up take on magic school.', 'magicians.jpg', 4.1),
+
+-- Mystery / Thriller
+('Gone Girl', 'Gillian Flynn', 'Mystery / Thriller', 'A psychological thriller about a marriage gone wrong.', 'gone_girl.jpg', 4.5),
+('The Girl with the Dragon Tattoo', 'Stieg Larsson', 'Mystery / Thriller', 'A journalist and hacker uncover a dark family secret.', 'dragon_tattoo.jpg', 4.4),
+('The Da Vinci Code', 'Dan Brown', 'Mystery / Thriller', 'A symbologist unravels a secret hidden in art.', 'da_vinci_code.jpg', 4.3),
+('Big Little Lies', 'Liane Moriarty', 'Mystery / Thriller', 'Dark secrets behind perfect suburban lives.', 'big_little_lies.jpg', 4.2),
+('The Silent Patient', 'Alex Michaelides', 'Mystery / Thriller', 'A woman stops speaking after a murder.', 'silent_patient.jpg', 4.3),
+('Before I Go to Sleep', 'S.J. Watson', 'Mystery / Thriller', 'A woman with amnesia tries to uncover the truth.', 'before_i_go_to_sleep.jpg', 4.0),
+('The Reversal', 'Michael Connelly', 'Mystery / Thriller', 'A defense attorney becomes a prosecutor.', 'reversal.jpg', 4.2),
+('In the Woods', 'Tana French', 'Mystery / Thriller', 'A detective with a haunted past investigates a child’s murder.', 'in_the_woods.jpg', 4.1),
+('Behind Closed Doors', 'B.A. Paris', 'Mystery / Thriller', 'A chilling psychological domestic thriller.', 'behind_closed_doors.jpg', 4.2),
+('The Woman in the Window', 'A.J. Finn', 'Mystery / Thriller', 'An agoraphobic woman witnesses something suspicious.', 'woman_in_the_window.jpg', 4.0),
+
+-- Romance
+('The Fault in Our Stars', 'John Green', 'Romance', 'A love story between two cancer patients.', 'fault_in_our_stars.jpg', 4.6),
+('Me Before You', 'Jojo Moyes', 'Romance', 'An emotional romance between a caregiver and a quadriplegic.', 'me_before_you.jpg', 4.5),
+('It Ends With Us', 'Colleen Hoover', 'Romance', 'A story about love and difficult choices.', 'it_ends_with_us.jpg', 4.4),
+('The Notebook', 'Nicholas Sparks', 'Romance', 'An enduring love story spanning decades.', 'notebook.jpg', 4.5),
+('The Time Traveler’s Wife', 'Audrey Niffenegger', 'Romance', 'A love story with a time-travel twist.', 'time_travelers_wife.jpg', 4.2),
+('Outlander', 'Diana Gabaldon', 'Romance', 'A WWII nurse travels to 18th-century Scotland and finds love.', 'outlander.jpg', 4.3),
+('Beautiful Disaster', 'Jamie McGuire', 'Romance', 'A rollercoaster college romance.', 'beautiful_disaster.jpg', 4.0),
+('Twilight', 'Stephenie Meyer', 'Romance', 'A vampire love story that sparked a craze.', 'twilight.jpg', 4.0),
+('The Hating Game', 'Sally Thorne', 'Romance', 'Office enemies turned lovers.', 'hating_game.jpg', 4.1),
+('People We Meet on Vacation', 'Emily Henry', 'Romance', 'A travel-based friends-to-lovers romcom.', 'people_we_meet.jpg', 4.3),
+
+-- Horror
+('The Shining', 'Stephen King', 'Horror', 'A family isolated in a haunted hotel.', 'the_shining.jpg', 4.6),
+('Dracula', 'Bram Stoker', 'Horror', 'The legendary vampire tale that started it all.', 'dracula.jpg', 4.3),
+('Frankenstein', 'Mary Shelley', 'Horror', 'A scientist creates a tragic monster.', 'frankenstein.jpg', 4.2),
+('The Exorcist', 'William Peter Blatty', 'Horror', 'A young girl possessed by a demonic entity.', 'exorcist.jpg', 4.4),
+('Bird Box', 'Josh Malerman', 'Horror', 'A post-apocalyptic world where seeing could kill.', 'bird_box.jpg', 4.1),
+('The Haunting of Hill House', 'Shirley Jackson', 'Horror', 'A psychological horror classic.', 'hill_house.jpg', 4.3),
+('Mexican Gothic', 'Silvia Moreno-Garcia', 'Horror', 'A gothic tale set in 1950s Mexico.', 'mexican_gothic.jpg', 4.0),
+('Pet Sematary', 'Stephen King', 'Horror', 'Sometimes dead is better...', 'pet_sematary.jpg', 4.2),
+('The Silence of the Lambs', 'Thomas Harris', 'Horror', 'A chilling story of a killer and a cannibal.', 'silence_of_the_lambs.jpg', 4.5),
+('House of Leaves', 'Mark Z. Danielewski', 'Horror', 'A mind-bending horror story with layers of reality.', 'house_of_leaves.jpg', 4.1),
+
+-- Biography / Memoir
+('Becoming', 'Michelle Obama', 'Biography / Memoir', 'The personal journey of the former First Lady.', 'becoming.jpg', 4.8),
+('Educated', 'Tara Westover', 'Biography / Memoir', 'A woman grows up in a strict, survivalist family.', 'educated.jpg', 4.7),
+('Steve Jobs', 'Walter Isaacson', 'Biography / Memoir', 'The life of Apple’s co-founder.', 'steve_jobs.jpg', 4.5),
+('Long Walk to Freedom', 'Nelson Mandela', 'Biography / Memoir', 'The autobiography of a global freedom fighter.', 'mandela.jpg', 4.7),
+('The Diary of a Young Girl', 'Anne Frank', 'Biography / Memoir', 'A Jewish girl’s voice during WWII.', 'anne_frank_memoir.jpg', 4.8),
+('Born a Crime', 'Trevor Noah', 'Biography / Memoir', 'The comedian’s life in apartheid South Africa.', 'born_a_crime.jpg', 4.6),
+('I Am Malala', 'Malala Yousafzai', 'Biography / Memoir', 'A brave fight for girls’ education.', 'i_am_malala.jpg', 4.6),
+('When Breath Becomes Air', 'Paul Kalanithi', 'Biography / Memoir', 'A doctor’s journey through terminal illness.', 'when_breath_becomes_air.jpg', 4.7),
+('Bossypants', 'Tina Fey', 'Biography / Memoir', 'A humorous memoir from the comedian and writer.', 'bossypants.jpg', 4.3),
+('Open', 'Andre Agassi', 'Biography / Memoir', 'A tennis star’s brutally honest autobiography.', 'open_agassi.jpg', 4.4);
+
+-- Indian Classics
+('The Guide', 'R.K. Narayan', 'Indian Classics', 'A story of transformation from a tourist guide to a spiritual guide and a redeemer.', 'the_guide.jpg', 4.4),
+('Malgudi Days', 'R.K. Narayan', 'Indian Classics', 'A collection of short stories set in the fictional South Indian town of Malgudi.', 'malgudi_days.jpg', 4.5),
+('Godaan', 'Munshi Premchand', 'Indian Classics', 'A poignant tale of a poor farmer and the harsh realities of rural India.', 'godaan.jpg', 4.6),
+('Train to Pakistan', 'Khushwant Singh', 'Indian Classics', 'A powerful depiction of the Partition of India in 1947.', 'train_to_pakistan.jpg', 4.4),
+('Gitanjali', 'Rabindranath Tagore', 'Indian Classics', 'A collection of deeply spiritual poems that won the Nobel Prize.', 'gitanjali.jpg', 4.7),
+('Chandrakanta', 'Devaki Nandan Khatri', 'Indian Classics', 'An epic fantasy love story and a pioneer in Hindi fiction.', 'chandrakanta.jpg', 4.3),
+('The White Tiger', 'Aravind Adiga', 'Indian Classics', 'A dark and witty tale of ambition, corruption, and survival in modern India.', 'white_tiger.jpg', 4.2),
+('Untouchable', 'Mulk Raj Anand', 'Indian Classics', 'A powerful commentary on the caste system through the life of a young sweeper.', 'untouchable.jpg', 4.4),
+('Coolie', 'Mulk Raj Anand', 'Indian Classics', 'An emotional journey of a young boy navigating class and exploitation.', 'coolie.jpg', 4.3),
+('Raag Darbari', 'Shri Lal Shukla', 'Indian Classics', 'A satirical take on Indian rural politics and bureaucracy.', 'raag_darbari.jpg', 4.5);
+
+
+#borrowed books
+CREATE TABLE borrowed_books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT NOT NULL,
+    user_id INT NOT NULL,
+    borrowed_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    returned_date DATE DEFAULT NULL,
+    FOREIGN KEY (book_id) REFERENCES books(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+#transactions
+CREATE TABLE transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT,
+    user_id INT,
+    borrow_date DATE,
+    return_date DATE DEFAULT NULL,
+    due_date DATE,
+    fine DECIMAL(10, 2) DEFAULT 0.00,
+    status ENUM('borrowed', 'returned') DEFAULT 'borrowed',
+    FOREIGN KEY (book_id) REFERENCES books(book_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+ALTER TABLE transactions
+ADD CONSTRAINT fk_book
+FOREIGN KEY (book_id) REFERENCES books(id),
+ADD CONSTRAINT fk_user
+FOREIGN KEY (user_id) REFERENCES users(id);
