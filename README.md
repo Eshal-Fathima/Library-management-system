@@ -2,7 +2,7 @@
 A fully functional Library Management System using PHP, MySQL, HTML, CSS and JS to manage registration, login, book borrowing/returning, and student records. It features smooth MySQL connectivity and a clean, sidebar-based dashboard for students and teachers.
 
 
-Features:
+#Features:
 
 *User registration and login (students & teachers)
 
@@ -18,7 +18,7 @@ Features:
 
 
 
-Modules:
+#Modules:
 
 *Authentication – Registration and login by role
 
@@ -33,7 +33,7 @@ Modules:
 
 
 
-Technologies Used:
+#Technologies Used:
 
 Frontend: HTML, CSS, JavaScript
 
@@ -48,7 +48,7 @@ Editor: VS Code
 
 
 
-Requirements Software:
+#Requirements Software:
 
 XAMPP (Apache + MySQL)
 
@@ -59,7 +59,7 @@ Browser (Chrome, Firefox)
 
 
 
-Hardware:
+#Hardware:
 
 4 GB RAM or more
 
@@ -70,7 +70,7 @@ Dual-core processor
 
 
 
-Setup Instructions:
+#Setup Instructions:
 
 Clone or download the repo
 
@@ -87,7 +87,7 @@ Visit http://localhost/library_system_1/pages/login.php
 
 
 
-IMAGES:
+#IMAGES:
 
 For the images download the cover of the image from pinterest or any website. 
 
