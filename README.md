@@ -4,45 +4,36 @@ A fully functional Library Management System using PHP, MySQL, HTML, CSS and JS 
 
 #Features:
 
-*User registration and login (students & teachers)
+User registration and login (students & teachers)
 
-*Book borrowing (max 2 books) with due date
+Book borrowing (max 2 books) with due date
 
-*Book return with fine calculation (₹5/day overdue)
+Book return with fine calculation (₹5/day overdue)
 
-*View student details and borrow history
+View student details and borrow history
 
-*Role-based access and session handling
+Role-based access and session handling
 
-*Book search and genre auto-fill
+Book search and genre auto-fill
 
 
 
 #Modules:
 
-*Authentication – Registration and login by role
-
-*Book Borrowing – Borrow with auto due date
-
-*Book Return – Return with fine display
-
-*Student Details – View personal and borrow info
-
-*Dashboard – Sidebar navigation and access control
-
+Authentication |
+Book Borrowing |
+Book Return |
+Student Details |
+Dashboard |
 
 
 
 #Technologies Used:
 
-Frontend: HTML, CSS, JavaScript
-
-Backend: PHP
-
-Database: MySQL
-
-Server: XAMPP
-
+Frontend: HTML, CSS, JavaScript |
+Backend: PHP |
+Database: MySQL |
+Server: XAMPP |
 Editor: VS Code
 
 
