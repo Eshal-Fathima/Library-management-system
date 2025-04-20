@@ -1,0 +1,23 @@
+#FILE STRUCTURE
+library_system/
+├── assets/
+│   └── books/
+|        └── images
+|   └── library image
+├── includes/
+│   └── db.php
+├── css/
+│   ├── style.css
+├── pages/
+│   ├── login.php
+│   ├── register.php
+│   ├── logout.php
+│   ├── process_register.phpl
+└── books.php
+└── books_borrow.php
+└── dasboard.php
+└── mybooks.php
+└── return_book.php
+└── student_dashboard.php
+└── dstudent_details.php
+└── view_details.php
