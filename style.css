@@ -1,0 +1,229 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background: #f5f5dc; /* beige background */
+}
+
+/* Main login container */
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left section - form */
+.login-left {
+    flex: 1;
+    background: #f5f5dc;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInLeft 0.8s ease-out;
+    color: #000;
+}
+
+.login-left h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.login-left p {
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.login-left form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s;
+    background-color: #fffaf0;
+    color: #000;
+}
+
+.login-left form input:focus {
+    border-color: #c19a6b;
+    outline: none;
+}
+
+.login-left form button {
+    padding: 12px;
+    width: 100%;
+    border: none;
+    background-color: #d2b48c; /* tan */
+    color: black;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-left form button:hover {
+    background-color: #c19a6b; /* darker tan */
+}
+
+.register-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-link a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Right section - remove image and use classic style */
+.login-right {
+    flex: 1;
+    background-color: #f5f5dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    animation: slideInRight 0.8s ease-out;
+}
+
+.login-right .overlay-text {
+    text-align: center;
+    color: #000;
+    z-index: 1;
+}
+
+.login-right h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.login-right p {
+    font-style: italic;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Error message */
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+    .login-right {
+        display: none;
+    }
+}
+.role-select {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #000;
+    font-family: 'Georgia', serif;
+  }
+  
+  .role-select label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .role-select select {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+    color: #000;
+    border-radius: 5px;
+    font-family: 'Georgia', serif;
+  }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f6f1e9; /* beige book-like */
+    color: #111;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 0 40px;
+  }
+  
+  .book-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: bottom 0.4s ease;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .book-card:hover .overlay {
+    bottom: 0;
+  }
+  
+  .overlay h3 {
+    margin: 5px 0 8px;
+  }
+  
+  .overlay p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+  }
+  
